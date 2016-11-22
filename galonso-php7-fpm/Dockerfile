@@ -11,7 +11,9 @@ RUN sudo apt-get install -qq -y \
     libvpx-dev                  \
     libjpeg-dev                 \
     libpng-dev                  \
-    libmcrypt-dev
+    libmcrypt-dev               \
+    libcurl4-openssl-dev        \
+    pkg-config
 
 RUN cd /tmp;                                                      \
     curl -LO http://php.net/distributions/php-7.0.4.tar.bz2;      \
@@ -19,6 +21,7 @@ RUN cd /tmp;                                                      \
     cd php-*;                                                     \
     ./configure                                                   \
       --prefix=/usr/local/php                                     \
+      --with-openssl                         \
       --with-config-file-path=/usr/local/php                      \
       --with-config-file-scan-dir=/usr/local/php/php.ini.d/       \
       --with-curl                                                 \
