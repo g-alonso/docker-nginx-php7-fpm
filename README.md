@@ -13,13 +13,13 @@ Entorno de desarrollo nginx con php7-fpm sobre Ubuntu 16.04 con SupervisorD
 ## Configuración del servidor
 
 ### Nginx
-server_name     app.ngnix.dev.com;
-root            /usr/local/nginx/htdocs/app;
-error_log       /usr/local/nginx/htdocs/app.error error;
+server_name     app.ngnix.dev.com;  
+root            /usr/local/nginx/htdocs/app;  
+error_log       /usr/local/nginx/htdocs/app.error error;  
 listen  8088;
 
 ### Php
-PHP CLI binary:        /usr/local/php/bin/
+PHP CLI binary:        /usr/local/php/bin/  
 
 ## Instalación
 
